@@ -112,16 +112,38 @@ nav .logo {
     font-weight: 700;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
 nav .logo h1 {
     font-size: 1em;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav .logo i {
-    color: var(--accent-color);
+    color: white;
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    animation: spinContinuous 3s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spinContinuous {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .hamburger {
@@ -399,10 +421,190 @@ nav ul li a:hover {
 
 /* About Section */
 .about {
+    display: block;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 50px;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Profile Card */
+.about-profile-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    position: sticky;
+    top: 100px;
+    animation: slideInLeft 0.8s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-image-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-status {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 8px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #667eea;
+}
+
+.profile-status i {
+    font-size: 1.1em;
+}
+
+.profile-info {
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+}
+
+.profile-info h3 {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.profile-role {
+    font-size: 0.95em;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
+}
+
+.stat-item i {
+    font-size: 1.3em;
+}
+
+.stat-item span {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* About Content Modern */
+.about-content-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+    animation: slideInRight 0.8s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-intro {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.about-intro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+    border-left-color: #667eea;
+}
+
+.intro-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.intro-text h4 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.intro-text p {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #666;
 }
 
 .about .content {
@@ -1274,9 +1476,32 @@ footer p {
         width: 60px;
     }
     
-    .about {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-profile-card {
+        position: static;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .about-intro {
         flex-direction: column;
-        gap: 40px;
+        text-align: center;
+    }
+
+    .intro-icon {
+        margin: 0 auto;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .intro-text p {
+        text-align: left;
     }
     
     .about .content {
@@ -1456,6 +1681,7 @@ footer p {
     
     .hero {
         margin-top: 40px;
+        padding: 0 20px;
     }
     
     .hero h2 {
@@ -1465,10 +1691,14 @@ footer p {
     
     .hero-subtitle {
         font-size: 0.9em;
+        padding: 0 15px;
+        line-height: 1.5;
+        word-wrap: break-word;
     }
     
     .hero-description {
         font-size: 0.85em;
+        padding: 0 15px;
     }
     
     .social-links {
@@ -1504,6 +1734,43 @@ footer p {
     .section h2::after {
         width: 50px;
         bottom: -10px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-profile-card {
+        padding: 20px;
+        position: static;
+    }
+
+    .profile-info h3 {
+        font-size: 1.3em;
+    }
+
+    .profile-role {
+        font-size: 0.85em;
+    }
+
+    .about-intro {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .intro-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+
+    .intro-text h4 {
+        font-size: 1.1em;
+    }
+
+    .intro-text p {
+        font-size: 0.95em;
     }
     
     .skill-set {
