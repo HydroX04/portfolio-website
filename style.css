@@ -951,6 +951,15 @@ nav ul li a:hover {
     padding: 12px 10px;
 }
 
+/* Prevent movement on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .exp-item:hover,
+    .exp-item:active {
+        transform: none;
+        padding: 12px 0;
+    }
+}
+
 @keyframes slideUp {
     from {
         opacity: 0;
