@@ -28,7 +28,7 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <!-- Favicon -->
@@ -38,483 +38,798 @@
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header role="banner">
-        <nav role="navigation" aria-label="Main navigation">
+    <!-- Enhanced Navigation with Theme Toggle -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
             <div class="logo">
-                <h1><i class="fas fa-code" aria-hidden="true"></i> Dynar Tubigan</h1>
+                <a href="#home">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <span class="logo-text">Dynar<span class="logo-accent">.dev</span></span>
+                </a>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                <i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
-            <ul id="nav-menu" role="menubar">
-                <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
-                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
-                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
-                <li role="none"><a href="#certificates" class="nav-link" role="menuitem">Certificates</a></li>
-                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero" id="home">
-            <h2>Hello, I'm <span class="typing-text">Dynar Tubigan</span></h2>
-            <p class="hero-subtitle">4th Year IT Student | Web Developer | Backend Developer | QA | Problem Solver</p>
-            <p class="hero-description">Polytechnic University of the Philippines</p>
+            
+            <div class="nav-center">
+                <ul id="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" class="nav-link active" role="menuitem"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li role="none"><a href="#about" class="nav-link" role="menuitem"><i class="fas fa-user"></i><span>About</span></a></li>
+                    <li role="none"><a href="#skills" class="nav-link" role="menuitem"><i class="fas fa-tools"></i><span>Skills</span></a></li>
+                    <li role="none"><a href="#experience" class="nav-link" role="menuitem"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
+                    <li role="none"><a href="#projects" class="nav-link" role="menuitem"><i class="fas fa-code-branch"></i><span>Projects</span></a></li>
+                    <li role="none"><a href="#certificates" class="nav-link" role="menuitem"><i class="fas fa-certificate"></i><span>Certificates</span></a></li>
+                    <li role="none"><a href="#contact" class="nav-link" role="menuitem"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon"></i>
+                </button>
+                
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" role="banner">
+        <div class="hero-background">
+            <div class="particles-container" id="particles"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <div class="avatar-circle">
+                    <img src="pic/asda.PNG" alt="Dynar Tubigan" class="avatar-image">
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for opportunities</span>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="greeting">Hello, I'm</span>
+                <span class="typing-text">Dynar Tubigan</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                <span class="role-tag">4th Year IT Student</span>
+                <span class="separator">|</span>
+                <span class="role-tag">Web Developer</span>
+                <span class="separator">|</span>
+                <span class="role-tag">Backend Developer</span>
+                <span class="separator">|</span>
+                <span class="role-tag">QA</span>
+            </p>
+            
+            <p class="hero-description">
+                <i class="fas fa-graduation-cap"></i>
+                Polytechnic University of the Philippines
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number no-animate">6+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number no-animate"></> 3+</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+            </div>
+            
             <div class="social-links" role="list" aria-label="Social media links">
-                <a href="https://github.com/HydroX04" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Visit my GitHub profile">
+                <a href="https://github.com/HydroX04" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="Visit my GitHub profile">
                     <i class="fab fa-github" aria-hidden="true"></i>
+                    <span class="social-tooltip">GitHub</span>
                 </a>
-                <a href="https://www.linkedin.com/in/dynar-tubigan-820050253/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Visit my LinkedIn profile">
+                <a href="https://www.linkedin.com/in/dynar-tubigan-820050253/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="Visit my LinkedIn profile">
                     <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span class="social-tooltip">LinkedIn</span>
                 </a>
-                <a href="mailto:dynartubigan.1@gmail.com" title="Email" aria-label="Send me an email">
+                <a href="mailto:dynartubigan.1@gmail.com" class="social-link" title="Email" aria-label="Send me an email">
                     <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span class="social-tooltip">Email</span>
                 </a>
             </div>
+            
             <div class="hero-buttons">
-                <a href="#projects" class="btn" aria-label="View my work">
-                    <i class="fas fa-briefcase" aria-hidden="true"></i> View My Work
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                    <span>View My Work</span>
                 </a>
-                <a href="Dynar_Tubigan_Resume.pdf" download class="btn" aria-label="Download my resume">
-                    <i class="fas fa-download" aria-hidden="true"></i> Download Resume
+                <a href="Dynar_Tubigan_Resume.pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                    <span>Download Resume</span>
                 </a>
             </div>
         </div>
 
-        <!-- Floating Programming Symbols -->
-        <div class="floating-symbols" aria-hidden="true">
-            <div class="symbol" data-symbol="&lt;/&gt;">
-                <span>&lt;/&gt;</span>
-            </div>
-            <div class="symbol" data-symbol="{  }">
-                <span>{ }</span>
-            </div>
-            <div class="symbol" data-symbol="[ ]">
-                <span>[ ]</span>
-            </div>
-            <div class="symbol" data-symbol="λ">
-                <span>λ</span>
-            </div>
-            <div class="symbol" data-symbol="∞">
-                <span>∞</span>
-            </div>
-            <div class="symbol" data-symbol="&lt;/&gt;">
-                <span>&lt;/&gt;</span>
-            </div>
-            <div class="symbol" data-symbol="( )">
-                <span>( )</span>
-            </div>
-            <div class="symbol" data-symbol="=">
-                <span>=</span>
-            </div>
-            <div class="symbol" data-symbol="$">
-                <span>$</span>
-            </div>
-            <div class="symbol" data-symbol="&&">
-                <span>&&</span>
-            </div>
-            <div class="symbol" data-symbol="||">
-                <span>||</span>
-            </div>
-            <div class="symbol" data-symbol="=>">
-                <span>=></span>
-            </div>
-            <div class="symbol" data-symbol="*">
-                <span>*</span>
-            </div>
-            <div class="symbol" data-symbol="#">
-                <span>#</span>
-            </div>
-            <div class="symbol" data-symbol="~">
-                <span>~</span>
-            </div>
-            <div class="symbol" data-symbol="@">
-                <span>@</span>
-            </div>
-            <div class="symbol" data-symbol="<<">
-                <span><<</span>
-            </div>
-            <div class="symbol" data-symbol=">>">
-                <span>>></span>
-            </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="mouse-wheel"></span>
+            </span>
+            <p>Scroll to explore</p>
         </div>
     </header>
 
     <main id="main-content">
+        <!-- About Section -->
         <section id="about" class="section about" aria-labelledby="about-heading">
-            <h2 id="about-heading"><i class="fas fa-user" aria-hidden="true"></i> About Me</h2>
-            
-            <div class="about-wrapper">
-                <!-- Profile Card -->
-                <div class="about-profile-card">
-                    <div class="profile-image-wrapper">
-                        <img src="pic/asda.PNG" alt="Dynar Tubigan profile picture" loading="lazy">
-                        <div class="profile-status">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>4th Year IT Student</span>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Get to know me</span>
+                    <h2 id="about-heading">About Me</h2>
+                    <p class="section-description">Passionate IT student with a focus on creating elegant solutions</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Who I Am</h3>
+                            <p>I am a dedicated 4th-year IT student at Polytechnic University of the Philippines with a strong passion for web development, backend systems, and quality assurance. My journey in technology is driven by curiosity and a commitment to continuous learning.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>What I Do</h3>
+                            <p>I specialize in building robust backend systems, developing user-friendly web applications, and ensuring software quality through comprehensive testing. I thrive in collaborative environments and enjoy solving complex technical challenges.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>My Goals</h3>
+                            <p>I'm seeking opportunities to apply my skills in a Quality Assurance internship while expanding my knowledge in cybersecurity and software development. I aim to contribute to innovative projects that make a meaningful impact.</p>
                         </div>
                     </div>
-                    <div class="profile-info">
-                        <h3>Dynar Tubigan</h3>
-                        <p class="profile-role">BSIT Student learning QA, systems, and cybersecurity basics</p>
-                        <div class="profile-stats">
-                            <div class="stat-item">
-                                <i class="fas fa-code"></i>
-                                <span>3+ Languages</span>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <div class="highlight-content">
+                                <h4>Academic Excellence</h4>
+                                <p>President's List & Dean's List awardee</p>
                             </div>
-                            <div class="stat-item">
-                                <i class="fas fa-project-diagram"></i>
-                                <span>6+ Projects</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <div class="highlight-content">
+                                <h4>Research Focus</h4>
+                                <p>Data Privacy & Digital Ethics</p>
                             </div>
-                            <div class="stat-item">
-                                <i class="fas fa-certificate"></i>
-                                <span>3 Certificates</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="highlight-content">
+                                <h4>Specialization</h4>
+                                <p>Backend Development & QA Testing</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- About Content -->
-                <div class="about-content-modern">
-                    <div class="about-intro">
-                        <div class="intro-icon">
-                            <i class="fas fa-user-tie"></i>
+        <!-- Skills Section -->
+        <section id="skills" class="section skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What I Know</span>
+                    <h2 id="skills-heading">Skills & Expertise</h2>
+                    <p class="section-description">Technical and soft skills I've developed</p>
+                </div>
+                
+                <div class="skills-container">
+                    <!-- Tab Navigation -->
+                    <div class="skill-tabs" role="tablist" aria-label="Skill categories">
+                        <button class="skill-tab-btn active" data-category="technical" role="tab" aria-selected="true" aria-controls="technical-panel">
+                            <i class="fas fa-code"></i>
+                            <span>Technical Skills</span>
+                        </button>
+                        <button class="skill-tab-btn" data-category="tools" role="tab" aria-selected="false" aria-controls="tools-panel">
+                            <i class="fas fa-tools"></i>
+                            <span>Tools & Frameworks</span>
+                        </button>
+                        <button class="skill-tab-btn" data-category="soft" role="tab" aria-selected="false" aria-controls="soft-panel">
+                            <i class="fas fa-users"></i>
+                            <span>Soft Skills</span>
+                        </button>
+                        <button class="skill-tab-btn" data-category="interests" role="tab" aria-selected="false" aria-controls="interests-panel">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Interests</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Tab Content -->
+                    <div class="skill-panels">
+                        <!-- Technical Skills Panel -->
+                        <div class="skill-panel active" data-category="technical" id="technical-panel" role="tabpanel">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>Python</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 85%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-php"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>PHP</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 80%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>SQL</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 85%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>JavaScript</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 75%"></div>
+                                        </div>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>HTML/CSS</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 90%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>Data Privacy & Security</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 80%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="intro-text">
-                            <h4>Introduction</h4>
-                            <p>I am a fourth-year Information Technology student with a strong interest in quality assurance, system validation, and user-focused problem solving. I have foundational knowledge in web development, which helps me better understand how systems work and how to effectively identify issues during testing and validation.</p>
+                        
+                        <!-- Tools & Frameworks Panel -->
+                        <div class="skill-panel" data-category="tools" id="tools-panel" role="tabpanel">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>FastAPI</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 85%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-laravel"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>Laravel</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 80%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>React</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 75%"></div>
+                                        </div>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>ASP.NET MVC</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 70%"></div>
+                                        </div>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-git-alt"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>Git & GitHub</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 85%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-bug"></i>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h3>Manual Testing</h3>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 80%"></div>
+                                        </div>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Soft Skills Panel -->
+                        <div class="skill-panel" data-category="soft" id="soft-panel" role="tabpanel">
+                            <div class="soft-skills-grid">
+                                <div class="soft-skill-card">
+                                    <i class="fas fa-comments"></i>
+                                    <h3>Communication</h3>
+                                    <p>Clear written and verbal communication with technical and non-technical stakeholders</p>
+                                </div>
+                                <div class="soft-skill-card">
+                                    <i class="fas fa-users-cog"></i>
+                                    <h3>Team Collaboration</h3>
+                                    <p>Effective collaboration in cross-functional teams and agile environments</p>
+                                </div>
+                                <div class="soft-skill-card">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <h3>Problem Solving</h3>
+                                    <p>Analytical thinking and creative approaches to technical challenges</p>
+                                </div>
+                                <div class="soft-skill-card">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <h3>Continuous Learning</h3>
+                                    <p>Adaptable mindset with eagerness to learn new technologies and methodologies</p>
+                                </div>
+                                <div class="soft-skill-card">
+                                    <i class="fas fa-file-alt"></i>
+                                    <h3>Documentation</h3>
+                                    <p>Thorough technical documentation and issue tracking practices</p>
+                                </div>
+                                <div class="soft-skill-card">
+                                    <i class="fas fa-clock"></i>
+                                    <h3>Time Management</h3>
+                                    <p>Efficient prioritization and delivery of quality work within deadlines</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Interests Panel -->
+                        <div class="skill-panel" data-category="interests" id="interests-panel" role="tabpanel">
+                            <div class="interests-grid">
+                                <div class="interest-card">
+                                    <div class="interest-icon">
+                                        <i class="fas fa-shield-virus"></i>
+                                    </div>
+                                    <h3>Cybersecurity</h3>
+                                    <p>Exploring security fundamentals, ethical hacking, and threat mitigation strategies</p>
+                                </div>
+                                <div class="interest-card">
+                                    <div class="interest-icon">
+                                        <i class="fas fa-user-secret"></i>
+                                    </div>
+                                    <h3>Data Privacy</h3>
+                                    <p>Understanding privacy laws, data protection, and ethical data handling practices</p>
+                                </div>
+                                <div class="interest-card">
+                                    <div class="interest-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <h3>Software Testing</h3>
+                                    <p>Learning advanced testing methodologies and automation frameworks</p>
+                                </div>
+                                <div class="interest-card">
+                                    <div class="interest-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </div>
+                                    <h3>Technical Writing</h3>
+                                    <p>Improving documentation skills and technical communication</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="about-intro">
-                        <div class="intro-icon">
-                            <i class="fas fa-laptop-code"></i>
+        <!-- Projects Section -->
+        <section id="projects" class="section projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">My Work</span>
+                    <h2 id="projects-heading">Featured Projects</h2>
+                    <p class="section-description">A showcase of my recent development work</p>
+                </div>
+                
+                <!-- Project Filter -->
+                <div class="project-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="system">Systems</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <article class="project-card" data-category="system backend">
+                        <div class="project-image">
+                            <img src="pic/hotel.PNG" alt="ReserveEase Hotel Management System interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://github.com/HydroX04/ReserveEasev2" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="intro-text">
-                            <h4>Practical Experience</h4>
-                            <p>Through academic projects and research, I have gained practical exposure to backend processes, web and mobile applications, and system workflows. I also developed working knowledge of programming concepts using Python, C, and SQL to support system functionality, testing, and data handling.</p>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>ReserveEase Hotel Management System</h3>
+                                <span class="project-tag featured">Featured</span>
+                            </div>
+                            <p class="project-description">Comprehensive hotel booking platform with real-time availability, reservation management, and integrated payment processing.</p>
+                            <p class="project-role"><strong>Role:</strong> Full Stack Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">FlutterFlow</span>
+                                <span class="tech-badge">Firebase</span>
+                                <span class="tech-badge">Stripe</span>
+                                <span class="tech-badge">SQLite</span>
+                            </div>
+                            <a href="https://github.com/HydroX04/ReserveEasev2" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="about-intro">
-                        <div class="intro-icon">
+                    <article class="project-card" data-category="web backend">
+                        <div class="project-image">
+                            <img src="pic/oos.PNG" alt="Online Ordering System interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://bleu-oos-rouge.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Online Ordering System (OOS)</h3>
+                                <span class="project-tag capstone">Capstone</span>
+                            </div>
+                            <p class="project-description">Full-featured online ordering platform with real-time tracking, authentication, and payment integration.</p>
+                            <p class="project-role"><strong>Role:</strong> Lead Backend Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">ReactJS</span>
+                                <span class="tech-badge">MS SQL</span>
+                                <span class="tech-badge">OAuth</span>
+                            </div>
+                            <a href="https://bleu-oos-rouge.vercel.app/" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="pic/ai-highlighter.PNG" alt="AI Smart Highlighter interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://ade-tproj1.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AI Smart Highlighter</h3>
+                                <span class="project-tag ai">AI-Powered</span>
+                            </div>
+                            <p class="project-description">AI-powered text analysis tool that automatically identifies and highlights important information to save time.</p>
+                            <p class="project-role"><strong>Role:</strong> Full Stack Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Tailwind</span>
+                                <span class="tech-badge">Gemini AI</span>
+                            </div>
+                            <a href="https://ade-tproj1.vercel.app/" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web system">
+                        <div class="project-image">
+                            <img src="pic/finance-management.PNG" alt="Finance Management System interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://github.com/HydroX04/exchange-system" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Finance Management System</h3>
+                            </div>
+                            <p class="project-description">Personal finance tool with expense tracking, real-time currency conversion, and multi-currency management.</p>
+                            <p class="project-role"><strong>Role:</strong> Full Stack Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">SQLite</span>
+                                <span class="tech-badge">API</span>
+                            </div>
+                            <a href="https://github.com/HydroX04/exchange-system" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="system">
+                        <div class="project-image">
+                            <img src="pic/ims.PNG" alt="Inventory Management System interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://github.com/HydroX04/IMSPUP" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Inventory Management System</h3>
+                            </div>
+                            <p class="project-description">Streamlined inventory solution for retail operations with automated stock tracking and real-time reporting.</p>
+                            <p class="project-role"><strong>Role:</strong> Full Stack Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">ASP.NET MVC</span>
+                                <span class="tech-badge">MSSQL</span>
+                                <span class="tech-badge">C#</span>
+                            </div>
+                            <a href="https://github.com/HydroX04/IMSPUP" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="system">
+                        <div class="project-image">
+                            <img src="pic/borrow.PNG" alt="Library Management System interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://github.com/cedsolano/LIBRARY-MANAGEMENT-SYSTEM" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Library Management System</h3>
+                            </div>
+                            <p class="project-description">An integrated system for managing library operations using SQLite3.</p>
+                            <p class="project-role"><strong>Role:</strong> Full Stack Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Tkinter</span>
+                                <span class="tech-badge">SQLite3</span>
+                            </div>
+                            <a href="https://github.com/cedsolano/LIBRARY-MANAGEMENT-SYSTEM" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web system">
+                        <div class="project-image">
+                            <img src="pic/eco.PNG" alt="E-Waste Mobile App interface" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://app.flutterflow.io/preview/eco-champion-31piq1?page=new_login_page" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>E-Waste Mobile App</h3>
+                            </div>
+                            <p class="project-description">A mobile app built using FlutterFlow to assist in e-waste management.</p>
+                            <p class="project-role"><strong>Role:</strong> Full Stack Developer</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">FlutterFlow</span>
+                                <span class="tech-badge">Firebase</span>
+                            </div>
+                            <a href="https://app.flutterflow.io/preview/eco-champion-31piq1?page=new_login_page" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="section certificates" aria-labelledby="certificates-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Achievements</span>
+                    <h2 id="certificates-heading">Certificates & Credentials</h2>
+                    <p class="section-description">Professional certifications and recognized achievements</p>
+                </div>
+                
+                <div class="certificates-grid">
+                    <article class="certificate-card">
+                        <div class="certificate-glow"></div>
+                        <div class="certificate-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div class="intro-text">
-                            <h4>Goals & Interests</h4>
-                            <p>I am committed to continuous learning and improving my technical and communication skills. I am particularly interested in exploring cybersecurity fundamentals and building strong IT foundations that contribute to reliable, secure, and user-centered technology solutions.</p>
+                        <div class="certificate-content">
+                            <h3>Certified Associate in Application Defense</h3>
+                            <p class="certificate-issuer">
+                                <i class="fas fa-university"></i>
+                                Polytechnic University of the Philippines
+                            </p>
+                            <p class="certificate-code">
+                                <i class="fas fa-id-badge"></i>
+                                PUP-CAAD
+                            </p>
+                            <a href="https://badges.parchment.com/public/assertions/DTJ9rqrVQRyG48sJLIbwog" class="certificate-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Credential</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-                
-            <!-- Experience and Education Section -->
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="pic/experience.png" alt="" class="icon" aria-hidden="true">
-                        <h3>Experience</h3>
-                        <div class="experience-list">
-                            <div class="exp-item">
-                                <strong>Quality Assurance & Testing (Project-Based)</strong>
-                                <p>Performed manual testing and validation of software applications developed during academic projects</p>
-                                <p>Created and executed test cases while identifying functional issues, edge cases, and usability concerns</p>
-                                <p>Conducted testing alongside development to ensure system stability and correctness</p>
-                            </div>
-                            <div class="exp-item">
-                                <strong>System Development (Academic Projects)</strong>
-                                <p>Designed and developed backend components and system workflows for web-based applications</p>
-                                <p>Implemented system logic and data handling while ensuring proper functionality through continuous testing</p>
-                                <p>Collaborated with team members to align development output with system requirements</p>
-                            </div>
-                            <div class="exp-item">
-                                <strong>IT Support & Technical Assistance (Project Exposure)</strong>
-                                <p>Assisted in troubleshooting system-related issues encountered during development and testing</p>
-                                <p>Documented technical issues, findings, and improvement recommendations</p>
-                                <p>Supported teammates by validating fixes and ensuring systems functioned as expected</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details-container">
-                        <img src="pic/education.png" alt="" class="icon" aria-hidden="true">
-                        <h3>Education</h3>
-                        <p><strong>Bachelor of Science in Information Technology</strong><br>Polytechnic University of the Philippines<br><span class="year-badge">2022 - Present</span></p>
-                    </div>
-                </div>
-        </section>
+                    </article>
 
-        <section id="skills" class="section skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading"><i class="fas fa-laptop-code" aria-hidden="true"></i> Technical Skills</h2>
-            
-            <div class="skills-container">
-                <!-- Skill Tabs -->
-                <div class="skill-tabs">
-                    <button class="skill-tab-btn active" data-category="programming" aria-selected="true">
-                        <i class="fas fa-code" aria-hidden="true"></i>
-                        <span>Programming</span>
-                    </button>
-                    <button class="skill-tab-btn" data-category="web" aria-selected="false">
-                        <i class="fas fa-globe" aria-hidden="true"></i>
-                        <span>Web Dev</span>
-                    </button>
-                    <button class="skill-tab-btn" data-category="backend" aria-selected="false">
-                        <i class="fas fa-server" aria-hidden="true"></i>
-                        <span>Backend</span>
-                    </button>
-                    <button class="skill-tab-btn" data-category="database" aria-selected="false">
-                        <i class="fas fa-database" aria-hidden="true"></i>
-                        <span>Database</span>
-                    </button>
-                    <button class="skill-tab-btn" data-category="analytics" aria-selected="false">
-                        <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                        <span>Analytics</span>
-                    </button>
-                </div>
-
-                <!-- Skill Content -->
-                <div class="skill-content">
-                    <!-- Programming & Scripting -->
-                    <div class="skill-panel active" data-category="programming">
-                        <div class="skill-badge-group">
-                            <div class="skill-badge" style="animation-delay: 0s;">
-                                <div class="badge-icon"><i class="fab fa-python"></i></div>
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.1s;">
-                                <div class="badge-icon"><i class="fab fa-php"></i></div>
-                                <span>PHP</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.2s;">
-                                <div class="badge-icon"><i class="fas fa-database"></i></div>
-                                <span>SQL</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.3s;">
-                                <div class="badge-icon"><i class="fas fa-code"></i></div>
-                                <span>C</span>
-                            </div>
+                    <article class="certificate-card">
+                        <div class="certificate-glow"></div>
+                        <div class="certificate-icon">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
-                    </div>
-
-                    <!-- Web & Application Development -->
-                    <div class="skill-panel" data-category="web">
-                        <div class="skill-badge-group">
-                            <div class="skill-badge" style="animation-delay: 0s;">
-                                <div class="badge-icon"><i class="fab fa-php"></i></div>
-                                <span>PHP</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.1s;">
-                                <div class="badge-icon"><i class="fas fa-flask"></i></div>
-                                <span>Laravel</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.2s;">
-                                <div class="badge-icon"><i class="fab fa-react"></i></div>
-                                <span>React.js</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.3s;">
-                                <div class="badge-icon"><i class="fab fa-js"></i></div>
-                                <span>TypeScript</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.4s;">
-                                <div class="badge-icon"><i class="fas fa-mobile-alt"></i></div>
-                                <span>FlutterFlow</span>
-                            </div>
+                        <div class="certificate-content">
+                            <h3>mabl Skills Certification: Foundations</h3>
+                            <p class="certificate-issuer">
+                                <i class="fas fa-certificate"></i>
+                                mabl
+                            </p>
+                            <p class="certificate-code">
+                                <i class="fas fa-code"></i>
+                                Test Automation Foundations
+                            </p>
+                            <a href="https://verify.skilljar.com/c/nu3awrri7g6q" class="certificate-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Credential</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Backend & System Development -->
-                    <div class="skill-panel" data-category="backend">
-                        <div class="skill-badge-group">
-                            <div class="skill-badge" style="animation-delay: 0s;">
-                                <div class="badge-icon"><i class="fas fa-cube"></i></div>
-                                <span>REST API</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.1s;">
-                                <div class="badge-icon"><i class="fas fa-lock"></i></div>
-                                <span>Auth</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.2s;">
-                                <div class="badge-icon"><i class="fas fa-broadcast-tower"></i></div>
-                                <span>WebSocket</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.3s;">
-                                <div class="badge-icon"><i class="fas fa-bug"></i></div>
-                                <span>Debugging</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.4s;">
-                                <div class="badge-icon"><i class="fas fa-project-diagram"></i></div>
-                                <span>System Dev</span>
-                            </div>
+                    <article class="certificate-card">
+                        <div class="certificate-glow"></div>
+                        <div class="certificate-icon">
+                            <i class="fas fa-lock"></i>
                         </div>
-                    </div>
-
-                    <!-- Databases -->
-                    <div class="skill-panel" data-category="database">
-                        <div class="skill-badge-group">
-                            <div class="skill-badge" style="animation-delay: 0s;">
-                                <div class="badge-icon"><i class="fas fa-database"></i></div>
-                                <span>MS SQL Server</span>
-                            </div>
-                            <div class="skill-badge" style="animation-delay: 0.1s;">
-                                <div class="badge-icon"><i class="fas fa-database"></i></div>
-                                <span>SQLite</span>
-                            </div>
+                        <div class="certificate-content">
+                            <h3>Information Security</h3>
+                            <p class="certificate-issuer">
+                                <i class="fas fa-graduation-cap"></i>
+                                Saylor Academy
+                            </p>
+                            <p class="certificate-code">
+                                <i class="fas fa-book"></i>
+                                CS406
+                            </p>
+                            <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1743077093/1748529933DT.pdf" class="certificate-btn" target="_blank" rel="noopener noreferrer">
+                                <span>View Certificate</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
-                    </div>
-
-                    <!-- Data Analytics -->
-                    <div class="skill-panel" data-category="analytics">
-                        <div class="skill-badge-group">
-                            <div class="skill-badge" style="animation-delay: 0s;">
-                                <div class="badge-icon"><i class="fas fa-chart-pie"></i></div>
-                                <span>Power BI</span>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <img src="pic/borrow.PNG" alt="Library Management System interface screenshot" loading="lazy">
-                    <h3>Library Management System</h3>
-                    <p>An integrated system for managing library operations using SQLite3.</p>
-                    <p><strong>Role:</strong> Full Stack Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Tkinter</span>
-                        <span class="tech-badge">SQLite3</span>
-                    </div>
-                    <a href="https://github.com/cedsolano/LIBRARY-MANAGEMENT-SYSTEM" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View Library Management System project on GitHub">View Project</a>
-                </article>
-        
-                <article class="project-card">
-                    <img src="pic/eco.PNG" alt="E-Waste Mobile App interface screenshot" loading="lazy">
-                    <h3>E-Waste Mobile App</h3>
-                    <p>A mobile app built using FlutterFlow to assist in e-waste management.</p>
-                    <p><strong>Role:</strong> Full Stack Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">FlutterFlow</span>
-                        <span class="tech-badge">Firebase</span>
-                    </div>
-                    <a href="https://app.flutterflow.io/preview/eco-champion-31piq1?page=new_login_page" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View E-Waste Mobile App live preview">View Project</a>
-                </article>
-        
-                <article class="project-card">
-                    <img src="pic/hotel.PNG" alt="Hotel Management System interface screenshot" loading="lazy">
-                    <h3>Hotel Management System</h3>
-                    <p>A Windows Forms-based system for managing hotel bookings and services.</p>
-                    <p><strong>Role:</strong> Frontend Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">WinForms</span>
-                        <span class="tech-badge">SQLite</span>
-                    </div>
-                    <a href="https://github.com/HydroX04/ReserveEasev2" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View Hotel Management System project on GitHub">View Project</a>
-                </article>
-
-                <article class="project-card">
-                    <img src="pic/oos.png" alt="Online Ordering System interface screenshot" loading="lazy">
-                    <h3>Online Ordering System (OOS)</h3>
-                    <p>A comprehensive online ordering platform with real-time tracking and authentication - Capstone Project.</p>
-                    <p><strong>Role:</strong> Lead Backend Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">ReactJS</span>
-                        <span class="tech-badge">MS SQL</span>
-                        <span class="tech-badge">Google OAuth</span>
-                        <span class="tech-badge">Mapillary</span>
-                    </div>
-                    <a href="https://bleu-oos-rouge.vercel.app/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View Online Ordering System live demo">View Project</a>
-                </article>
-
-                <article class="project-card">
-                    <img src="pic/ai-highlighter.png" alt="AI Smart Highlighter interface screenshot" loading="lazy">
-                    <h3>AI Smart Highlighter</h3>
-                    <p>An AI-powered tool that analyzes text and automatically highlights important information, making it easier to identify key points and save time.</p>
-                    <p><strong>Role:</strong> Full Stack Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Tailwind CSS</span>
-                        <span class="tech-badge">Gemini AI</span>
-                    </div>
-                    <a href="https://ade-tproj1.vercel.app/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View AI Smart Highlighter live demo">View Project</a>
-                </article>
-
-                <article class="project-card">
-                    <img src="pic/finance-management.png" alt="Finance Management System interface screenshot" loading="lazy">
-                    <h3>Finance Management System</h3>
-                    <p>A comprehensive financial management tool designed to help users take control of their personal finances by offering expense tracking, real-time currency conversions, and multi-currency management powered by an integrated Exchange Rate API.</p>
-                    <p><strong>Role:</strong> Full Stack Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">Laravel</span>
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">SQLite</span>
-                        <span class="tech-badge">Exchange Rate API</span>
-                    </div>
-                    <a href="https://github.com/HydroX04/exchange-system" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View Finance Management System project on GitHub">View Project</a>
-                </article>
-
-                <article class="project-card">
-                    <img src="pic/ims.png" alt="Inventory Management System interface screenshot" loading="lazy">
-                    <h3>Inventory Management System (IMS)</h3>
-                    <p>A modern solution designed for 7 Evelyn Sari-Sari Store to streamline inventory management and improve operational efficiency. The system automates stock tracking, manages product sales, and ensures optimal stock levels while providing an intuitive interface for accurate, real-time inventory records.</p>
-                    <p><strong>Role:</strong> Full Stack Developer</p>
-                    <div class="tech-stack" aria-label="Technologies used">
-                        <span class="tech-badge">ASP.NET MVC</span>
-                        <span class="tech-badge">MSSQL</span>
-                        <span class="tech-badge">C#</span>
-                    </div>
-                    <a href="https://github.com/HydroX04/IMSPUP" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View Inventory Management System project on GitHub">View Project</a>
-                </article>
-            </div>
-        </section>
-
-        <section id="certificates" class="section certificates" aria-labelledby="certificates-heading">
-            <h2 id="certificates-heading"><i class="fas fa-certificate" aria-hidden="true"></i> Certificates & Credentials</h2>
-            <div class="certificates-grid">
-                <article class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Certified Associate in Application Defense</h3>
-                    <p class="certificate-issuer">Polytechnic University of the Philippines</p>
-                    <p class="certificate-code">PUP-CAAD</p>
-                    <a href="https://badges.parchment.com/public/assertions/DTJ9rqrVQRyG48sJLIbwog" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View PUPQC Certificate">View Credential</a>
-                </article>
-
-                <article class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>mabl Skills Certification: Foundations</h3>
-                    <p class="certificate-issuer">mabl</p>
-                    <p class="certificate-code">Test Automation Foundations</p>
-                    <a href="https://verify.skilljar.com/c/nu3awrri7g6q" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View mabl Certificate">View Credential</a>
-                </article>
-
-                <article class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Information Security</h3>
-                    <p class="certificate-issuer">Saylor Academy</p>
-                    <p class="certificate-code">CS406</p>
-                    <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1743077093/1748529933DT.pdf" class="btn" target="_blank" rel="noopener noreferrer" aria-label="View Information Security Certificate">View Certificate</a>
-                </article>
-            </div>
-        </section>
-        
+        <!-- Contact Section -->
         <section id="contact" class="section contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact Me</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:dynartubigan.1@gmail.com">dynartubigan.1@gmail.com</a>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 id="contact-heading">Let's Connect</h2>
+                    <p class="section-description">Feel free to reach out for opportunities or collaborations</p>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+639453900643">09453900643</a>
+                
+                <div class="contact-content">
+                    <div class="contact-info-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <a href="mailto:dynartubigan.1@gmail.com">dynartubigan.1@gmail.com</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Phone</h3>
+                            <a href="tel:+639453900643">+63 945 390 0643</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Location</h3>
+                            <p>Fairview, Quezon City, Philippines</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -522,27 +837,52 @@
 
     <footer role="contentinfo">
         <div class="footer-content">
-            <div class="footer-social" role="list" aria-label="Footer social media links">
-                <a href="https://github.com/HydroX04" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dynar-tubigan-820050253/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="mailto:dynartubigan.1@gmail.com" aria-label="Send me an email">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                </a>
+            <div class="footer-section">
+                <h3>Dynar Tubigan</h3>
+                <p>IT Student passionate about creating innovative solutions through code.</p>
             </div>
-            <p>&copy; 2026 Dynar Tubigan | All Rights Reserved</p>
-            <p class="footer-tagline">Built with <i class="fas fa-heart" aria-hidden="true"></i> and passion for technology</p>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-social">
+                    <a href="https://github.com/HydroX04" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dynar-tubigan-820050253/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:dynartubigan.1@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dynar Tubigan. All Rights Reserved</p>
+            <p class="footer-tagline">Built with <i class="fas fa-heart"></i> and passion for technology</p>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" title="Go to top" aria-label="Scroll to top of page">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js"></script>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
